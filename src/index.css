@@ -219,3 +219,24 @@ h1{
 .enterElectionBtn{
   @apply w-full
 }
+
+
+.candidates{
+  @apply mt-20 mb-20 
+}
+.candidates_header{
+  @apply flex flex-col items-center text-center w-2/3 m-auto
+}
+.candidates_header p{
+  @apply mb-12
+
+}
+
+
+.candidates_header p .btn.primary{
+@apply justify-center
+}
+
+.candidates_container{
+  @apply grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-12
+}
