@@ -1,11 +1,13 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { UiActions } from '../store/ui-slice'
+import { voteActions } from '../store/vote-slice'
 const Candidate = ({image,id,fullName,motto}) => {
   const dispatch=useDispatch()
 
   const openVoteCandidate=()=>{
       dispatch(UiActions.openVoteCandidateModel())
+      dispatch(voteActions.changeSelectedVoteCandidate(id))
   }
   return (
     <article className="candidate">

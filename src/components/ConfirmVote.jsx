@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import { candidates } from '../data'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { UiActions } from '../store/ui-slice'
 const ConfirmVote = () => {
     const [modelCandidate,setModelCandidate]=useState({})
@@ -12,9 +12,11 @@ const ConfirmVote = () => {
 
     }
 
+    const selectedVoteCandidate=useSelector(state=> state.vote.selectedVoteCandidate)
+
     const fetchCandidate=()=>{
         candidates.find(candidate=>{
-            if(candidate.id==='c1'){
+            if(candidate.id===selectedVoteCandidate){
                 setModelCandidate(candidate)
             }
         })
@@ -23,7 +25,7 @@ const ConfirmVote = () => {
     useEffect(()=>{
         fetchCandidate()
 
-    },[])
+    },[selectedVoteCandidate])
   return (
     <section className="model">
         <div className="model_content confirm_vote-content">
