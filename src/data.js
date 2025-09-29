@@ -45,6 +45,35 @@ export const candidates=[
         election:'e2'
 
 
+    },{
+        id:"c3",
+        fullName:"Michael Jackson",
+        image:Candidate2,
+        motto:"I can moon walk",
+        voteCount:100,
+        election:'e2'
+
+
+    },
+    {
+        id:"c4",
+        fullName:"Michael Jackson",
+        image:Candidate2,
+        motto:"I can moon walk",
+        voteCount:100,
+        election:'e2'
+
+
+    },
+    {
+        id:"c5",
+        fullName:"Michael Jackson",
+        image:Candidate2,
+        motto:"I can moon walk",
+        voteCount:100,
+        election:'e2'
+
+
     },
 ]
 
@@ -73,4 +102,5 @@ export const voters=[
         isAdmin:false,
         votedElections:["e1","e2"]
     },
+    
 ]

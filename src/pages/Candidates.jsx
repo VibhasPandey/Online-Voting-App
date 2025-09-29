@@ -2,14 +2,22 @@ import React from 'react'
 import {candidates as dummyCandidates} from '../data'
 import { useParams } from 'react-router-dom'
 import Candidate from '../components/Candidate'
+import ConfirmVote from '../components/ConfirmVote'
+import { useSelector } from 'react-redux'
+
+
+
 const Candidates = () => {
 
   const {id} = useParams()
+
+  const  voteCandidateModelShowing=useSelector(state=>state.ui.voteCandidateModelShowing)
   const candidates=dummyCandidates.filter(candidate=>candidate.election===id)
 
 
   return (
-    <section className="candidates">
+    <>
+      <section className="candidates">
       <header className="candidates_header">
         <h1>
           VOTE YOUR CANDIDATE
@@ -24,6 +32,9 @@ const Candidates = () => {
             }
       </div>
     </section>
+
+    {voteCandidateModelShowing && <ConfirmVote/>}
+    </>
   )
 }
 

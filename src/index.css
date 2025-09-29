@@ -221,22 +221,93 @@ h1{
 }
 
 
-.candidates{
-  @apply mt-20 mb-20 
-}
-.candidates_header{
-  @apply flex flex-col items-center text-center w-2/3 m-auto
-}
-.candidates_header p{
-  @apply mb-12
+/* === Your Original CSS Snippet (for reference) === */
 
+.candidates{ 
+  @apply mt-20 mb-20  
 }
 
+.candidates_header{ 
+  @apply flex flex-col items-center text-center w-2/3 m-auto mb-12 }
 
-.candidates_header p .btn.primary{
-@apply justify-center
+.candidates_container{ 
+  @apply grid grid-cols-3 gap-12 w-5xl mx-auto
 }
 
-.candidates_container{
-  @apply grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-12
+.candidate{
+   @apply bg-white text-center rounded-xl pb-5 overflow-hidden drop-shadow-xs border-4 border-solid border-white transition-all ease-out 
+  }
+
+.candidate:hover{ 
+  @apply shadow-none border-gray-100 }
+
+.candidate_image{ 
+  @apply aspect-square overflow-hidden m-auto mb-6 w-full }
+
+.candidate small{ 
+  @apply block mt-2 mb-4 ms-0 }
+
+
+.vote_button{
+  @apply w-32 
 }
+
+
+.model{
+  @apply fixed inset-0 z-10 min-h-screen w-screen grid justify-center items-center bg-black/50 backdrop-blur-xs; 
+}
+
+.model_content{
+  @apply bg-gray-50 w-xl rounded-2xl overflow-y-auto;
+  
+  
+}
+
+.modal_header{
+  @apply bg-[var(--color-primary)] flex items-center justify-between p-8
+}
+
+.modal h4{
+  @apply text-white
+}
+
+.modal_header button{
+  @apply bg-transparent text-2xl text-white
+}
+
+.modal_content form{
+  @apply mt-8 flex flex-col gap-6 p-8
+}
+
+.modal_content form input {
+  @apply mt-2.5 w-full pt-3 pb-3 pl-4 pr-4 bg-gray-100 rounded-xl text-gray-900
+}
+
+
+.confirm_vote-content {
+  @apply text-center rounded-2xl
+}
+
+.confirm_vote-content h5{
+  @apply mt-8 mb-8 ml-0 mr-0 text-[var(--color-primary)] 
+}
+
+.confirm_vote-image{
+  @apply w-xs aspect-square m-auto rounded-3xl overflow-hidden mb-8
+}
+
+.confirm_vote-content p{
+  @apply mt-1.5 mb-10 ml-0 mr-0 p-0 pl-8 pr-8
+}
+.confirm_vote-cta {
+  @apply w-fit flex items-center gap-10 m-auto mb-8
+}
+
+.confirm_vote-content h2{
+  @apply text-black font-bold text-2xl
+}
+.confirm_vote-content h5{
+  @apply text-2xl font-bold
+}
+
+
