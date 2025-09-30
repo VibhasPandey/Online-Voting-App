@@ -13,13 +13,18 @@ const ConfirmVote = () => {
     }
 
     const selectedVoteCandidate=useSelector(state=> state.vote.selectedVoteCandidate)
+    console.log("2. Received ID from Redux:", selectedVoteCandidate);
 
     const fetchCandidate=()=>{
-        candidates.find(candidate=>{
-            if(candidate.id===selectedVoteCandidate){
-                setModelCandidate(candidate)
-            }
-        })
+        console.log("3. Searching for ID:", selectedVoteCandidate, "in candidates array.");
+        const foundCandidate = candidates.find(candidate => candidate.id === selectedVoteCandidate);
+
+    if (foundCandidate) {
+        console.log("4. SUCCESS: Found candidate:", foundCandidate); 
+        setModelCandidate(foundCandidate);
+    } else {
+        console.log("4. FAILURE: No candidate found with that ID."); 
+    }
     }
 
     useEffect(()=>{

@@ -263,23 +263,23 @@ h1{
   
 }
 
-.modal_header{
+.model_header{
   @apply bg-[var(--color-primary)] flex items-center justify-between p-8
 }
 
-.modal h4{
+.model_content h4{
   @apply text-white
 }
 
-.modal_header button{
+.model_header button{
   @apply bg-transparent text-2xl text-white
 }
 
-.modal_content form{
+.model_content form{
   @apply mt-8 flex flex-col gap-6 p-8
 }
 
-.modal_content form input {
+.model_content form input {
   @apply mt-2.5 w-full pt-3 pb-3 pl-4 pr-4 bg-gray-100 rounded-xl text-gray-900
 }
 
@@ -331,3 +331,54 @@ h1{
 .congratsBTN{
   @apply w-xs p-3 mt-8 rounded-2xl shadow-2xl
 }
+
+
+
+
+.elections{
+  @apply mt-24 mb-15 ml-0 mr-0 
+}
+.elections_container{
+  @apply w-6xl
+}
+
+.elections_header{
+  @apply flex items-center justify-between mb-4 p-2 
+}
+
+.elections_menu{
+  @apply flex flex-col gap-4 
+}
+
+.election{
+  @apply grid grid-cols-[17rem_auto] items-center bg-gray-50 rounded-3xl overflow-hidden border-2 border-solid border-gray-200 
+}
+
+.election_image{
+  @apply max-h-52
+}
+
+.election:hover{
+  @apply drop-shadow-xl
+
+}
+
+.election_info {
+  @apply pt-4 pb-4 pl-8 pr-8 
+}
+
+.election_info h4{
+  @apply mb-3 text-[var(--color-primary)] text-xl font-semibold uppercase;
+}
+.election_cta{
+  @apply flex gap-5 mt-4
+}
+
+.electionBTN{
+  @apply w-24 shadow-2xs
+}
+
+.addElectionBTN{
+  @apply w-1/6 shadow-2xs
+}
+

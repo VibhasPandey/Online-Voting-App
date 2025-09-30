@@ -6,6 +6,7 @@ const Candidate = ({image,id,fullName,motto}) => {
   const dispatch=useDispatch()
 
   const openVoteCandidate=()=>{
+    console.log("1. Dispatching Candidate ID:", id);
       dispatch(UiActions.openVoteCandidateModel())
       dispatch(voteActions.changeSelectedVoteCandidate(id))
   }
