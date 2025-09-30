@@ -221,7 +221,7 @@ h1{
 }
 
 
-/* === Your Original CSS Snippet (for reference) === */
+
 
 .candidates{ 
   @apply mt-20 mb-20  
@@ -268,7 +268,7 @@ h1{
 }
 
 .model_content h4{
-  @apply text-white
+  @apply text-white uppercase text-lg font-bold
 }
 
 .model_header button{
@@ -276,11 +276,11 @@ h1{
 }
 
 .model_content form{
-  @apply mt-8 flex flex-col gap-6 p-8
+  @apply mt-8 flex flex-col gap-6 p-8 pt-2
 }
 
 .model_content form input {
-  @apply mt-2.5 w-full pt-3 pb-3 pl-4 pr-4 bg-gray-100 rounded-xl text-gray-900
+  @apply mt-2.5 w-full pt-3 pb-3 pl-4 pr-4 bg-gray-200 rounded-xl text-gray-900 
 }
 
 
@@ -380,5 +380,73 @@ h1{
 
 .addElectionBTN{
   @apply w-1/6 shadow-2xs
+}
+
+
+.election_details{
+  @apply mt-24 mb-24 ml-0 mr-0
+}
+.electionDetails_container{
+  @apply w-6xl
+}
+.electionDetails_image{
+  @apply h-60 mt-5 mb-3 ml-0 mr-0 object-contain
+}
+.electionDetails_candidates{
+  @apply mt-10 pt-10 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-12 border-t-2 border-solid border-gray-200
+}
+
+.electionCandidate{
+  @apply bg-white rounded-2xl overflow-hidden relative text-center shadow-xs
+}
+
+.electionCandidate_image{
+  @apply h-48 overflow-hidden
+}
+
+.electionCandidate h5{
+  @apply mt-1 p-1 text-lg font-semibold 
+}
+
+
+
+.electionCandidate > div:nth-child(2) {
+  @apply p-5
+}
+
+.electionCandidate_btn{
+  @apply absolute -right-2.5 -bottom-2.5 m-4  bg-red-500 text-white p-1.5 text-xl rounded-xl flex shadow-2xs
+}
+
+.electionCandidate_btn:hover{
+  @apply bg-gray-900
+}
+
+.add_candidate-btn{
+@apply bg-gray-100 border-2 border-solid border-[var(--color-primary)] rounded-2xl text-8xl text-[var(--color-primary)] shadow-xs transition-all ease-out grid place-content-center 
+}
+
+.add_candidate-btn:hover{
+  @apply border-gray-600 text-gray-600 shadow-2xl
+}
+
+.voters{
+  @apply mt-24 mb-12 ml-0 mr-0
+}
+.voters h2{
+  @apply text-center mb-12 text-xl uppercase font-extrabold
+}
+
+.voters_table{
+  @apply w-full 
+}
+.voters_table thead th{
+  @apply text-left pt-3 pb-3 pl-6 pr-6
+}
+.voters_table tbody td{
+  @apply pt-3 pb-3 pl-6 pr-6 
+}
+.voters_table tbody tr:nth-child(odd){
+  @apply bg-white
 }
 

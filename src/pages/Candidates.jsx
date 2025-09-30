@@ -20,11 +20,12 @@ const Candidates = () => {
       <section className="candidates">
       <header className="candidates_header">
         <h1>
-          VOTE YOUR CANDIDATE
+          {candidates.length > 0 ? "VOTE YOUR CANDIDATE":"ELECTION INACTIVE"}
         </h1>
         <p>
-          These are the candidates for the selected election. Please vote once and wisely, because you won't be allowed to vote in this election again
-        </p>
+           {candidates.length > 0 ? "These are the candidates for the selected election. Please vote once and wisely, because you won't be allowed to vote in this election again" : "The Election you're trying to participate into does not have any active candidates yet.Check the status later"}
+           </p>
+          
       </header>
       <div className="container candidates_container">
             { 
