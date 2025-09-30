@@ -1,5 +1,5 @@
 import React from 'react'
-import { elections,candidates} from '../data'
+import { elections,candidates, voters} from '../data'
 import { useParams } from 'react-router-dom'
 
 const ElectionDetails = () => {
@@ -22,6 +22,29 @@ const ElectionDetails = () => {
             electionCandidates.map(candidate=> <ElectionCandidate key={candidate.id} {...candidate}/>)
 
           }
+        </menu>
+
+        <menu className="voters">
+          <h2>Voters</h2>
+          <table className='voters_table'>
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Email Address</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                voters.map(voter=><tr>
+                  <td><h5>{voter.fullName}</h5></td>
+                  <td>{voter.email}</td>
+                  <td>10:43:34</td>
+                </tr>)
+              }
+            </tbody>
+
+          </table>
         </menu>
       </div>
     </section>
