@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiOutlineBars2 } from 'react-icons/hi2'
-import { IoIosMoon } from 'react-icons/io'
+import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import { Link,NavLink} from 'react-router-dom'
 import {useEffect,useState} from 'react'
 
@@ -34,8 +34,9 @@ const Navbar = () => {
             <NavLink to="/logout">Logout</NavLink>
           </menu>
           <div className='navButtons'>
-            <button onClick={changeThemeHandler} className='theme_toggle_btn'><IoIosMoon/></button>
-          {/* <button className='nav_toggle_btn'><HiOutlineBars2/></button> */}
+            <button onClick={changeThemeHandler} className='theme_toggle_btn'>
+             { darkTheme==='dark'?<IoIosSunny/>:<IoIosMoon/>}
+              </button>
           </div>
         </div>
 

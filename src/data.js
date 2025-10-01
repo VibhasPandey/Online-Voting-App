@@ -1,7 +1,11 @@
-import Thumbnail1 from './assets/istockphoto-877369086-612x612.jpg'
+import Thumbnail1 from './assets/parliament.jpeg'
 import Thumbnail2 from './assets/Nagarhole_Kabini_Karnataka_India,_Leopard_September_2013.jpg'
 import Candidate1 from './assets/Cristiano-Ronaldo-ceremony-rename-airport-Santa-Cruz-Madeira-Portugal-March-29-2017.webp'
 import Candidate2 from './assets/Michael Jackson 2008.jpg'
+import Candidate4 from './assets/Indian_National_Congress_hand_logo.svg.png'
+import Candidate3 from './assets/Bharatiya_Janata_Party_logo.svg.png'
+import Candidate5 from './assets/Aam_Aadmi_Party_logo_(English).svg.png'
+
 export const elections=[
     {
         id:"e1",
@@ -47,31 +51,31 @@ export const candidates=[
 
     },{
         id:"c3",
-        fullName:"Michael Jackson",
-        image:Candidate2,
-        motto:"I can moon walk",
+        fullName:"Bharatiya Janata Party",
+        image:Candidate3,
+        motto:"BJP's motto",
         voteCount:100,
-        election:'e2'
+        election:'e1'
 
 
     },
     {
         id:"c4",
-        fullName:"Michael Jackson",
-        image:Candidate2,
-        motto:"I can moon walk",
+        fullName:"Congress",
+        image:Candidate4,
+        motto:"Congress' motto",
         voteCount:100,
-        election:'e2'
+        election:'e1'
 
 
     },
     {
         id:"c5",
-        fullName:"Michael Jackson",
-        image:Candidate2,
-        motto:"I can moon walk",
+        fullName:"Aam Admi Party",
+        image:Candidate5,
+        motto:"AAP's motto",
         voteCount:100,
-        election:'e2'
+        election:'e1'
 
 
     },

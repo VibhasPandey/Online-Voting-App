@@ -29,7 +29,7 @@ const ElectionDetails = () => {
     <>
     <section className="election_details">
       <div className="container electionDetails_container">
-        <h2>{currentElection.title}</h2>
+        <h2 className='electionDetails_h2'>{currentElection.title}</h2>
         <p>{currentElection.description}</p>
         <div className="electionDetails_image">
           <img src={currentElection.thumbnail} alt={currentElection.title} />
@@ -41,9 +41,9 @@ const ElectionDetails = () => {
           }
           <button className="add_candidate-btn" onClick={openModel}><IoAddOutline/></button>
         </menu>
-
         <menu className="voters">
           <h2>Voters</h2>
+          {electionCandidates.length>0? 
           <table className='voters_table'>
             <thead>
               <tr>
@@ -64,7 +64,10 @@ const ElectionDetails = () => {
             </tbody>
 
           </table>
-        </menu>
+        :<div className='flex justify-center'>
+          <p className='text-gray-600 '>Voter-list is empty...</p></div>}
+         </menu>
+        
       </div>
     </section>
 

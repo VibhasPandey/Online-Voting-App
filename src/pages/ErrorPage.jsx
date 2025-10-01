@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom'
 const ErrorPage = () => {
   const navigate=useNavigate();
   
-  // useEffect(()=>{
-  //   setTimeout(()=>{
-  //     navigate(-1)
-  // },4000)
-  //})
+   useEffect(()=>{
+     setTimeout(()=>{
+       navigate(-1)
+   },6000)
+  })
   return (
     <div className='errorPageContainer'>
       <div className='errorGifContainer'>

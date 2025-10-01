@@ -387,10 +387,10 @@ h1{
   @apply mt-24 mb-24 ml-0 mr-0
 }
 .electionDetails_container{
-  @apply w-6xl
+  @apply w-5xl
 }
 .electionDetails_image{
-  @apply h-60 mt-5 mb-3 ml-0 mr-0 object-contain
+  @apply h-60 mt-5 mb-3 ml-0 mr-0 object-cover
 }
 .electionDetails_candidates{
   @apply mt-10 pt-10 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-12 border-t-2 border-solid border-gray-200
@@ -450,3 +450,91 @@ h1{
   @apply bg-white
 }
 
+.electionDetails_h2{
+  @apply text-2xl font-bold uppercase
+}
+
+/* ==================== DARK THEME TOGGLE ==================== */
+body.dark {
+  @apply bg-gray-900 text-gray-200;
+}
+
+
+.dark .btn {
+  @apply bg-gray-700 text-gray-100;
+}
+.dark .btn.primary{
+@apply bg-[var(--color-primary)] text-white;
+}
+
+.dark .btn:hover {
+  @apply bg-gray-600;
+}
+.dark p {
+  @apply text-gray-400;
+}
+
+
+.dark .register {
+  @apply bg-gray-900;
+}
+.dark .register_container {
+  @apply bg-gray-800 shadow-lg;
+}
+.dark .register form input {
+  @apply bg-gray-700 text-gray-100;
+}
+
+
+.dark .result {
+  @apply bg-gray-800;
+}
+.dark .result_header {
+  @apply bg-gray-700 border-gray-800;
+}
+.dark .result_candidate-loader {
+  @apply bg-gray-700;
+}
+
+
+.dark .candidate {
+  @apply bg-gray-800 border-gray-800;
+}
+.dark .candidate:hover {
+  @apply border-gray-700;
+}
+
+
+.dark .model_content {
+  @apply bg-gray-800;
+}
+.dark .model_content form input {
+  @apply bg-gray-700 text-gray-100;
+}
+.dark .confirm_vote-content h2 {
+  @apply text-white;
+}
+
+
+.dark .congrats h2 {
+  @apply text-white;
+}
+
+
+.dark .election {
+  @apply bg-gray-800 border-gray-700;
+}
+.dark .electionCandidate {
+  @apply bg-gray-800;
+}
+.dark .add_candidate-btn {
+  @apply  bg-gray-800 border-[var(--color-primary)];
+}
+.dark .add_candidate-btn:hover {
+  @apply border-gray-600 text-gray-600;
+}
+
+
+.dark .voters_table tbody tr:nth-child(odd) {
+  @apply bg-gray-800;
+}
